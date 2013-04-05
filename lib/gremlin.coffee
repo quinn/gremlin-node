@@ -5,20 +5,31 @@ class Gremlin
   run: (callback) ->
     @db.execute @script, @params, callback
 
-  v: (options) ->
-    @script ||= ''
-    @script += "g.v(1)"
-    @params ||= {}
-    @params.vParam = options
-    return this
+  v: (val) ->
+    # @params ||= {}
+    # @params.vParam = options
+    @_start "v(#{val})"
+
+  V: ->
+    @_start 'V'
 
   outE: ->
     @script += '.outE'
     return this
 
   out: (val) ->
-    @script += ".out('#{val}')"
+    @script += '.out'
+    if val then @script += "('#{val}')"
     return this
+
+  in: (val) ->
+    @script += '.in'
+    if val then @script += "('#{val}')"
+    return this
+
+  _start: (str) ->
+    @script ||= ''
+    @script += 'g.' + str
 
 exports.db = (db) ->
   new Gremlin {db}

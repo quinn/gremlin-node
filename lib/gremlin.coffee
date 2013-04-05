@@ -16,5 +16,9 @@ class Gremlin
     @script += '.outE'
     return this
 
+  out: (val) ->
+    @script += ".out('#{val}')"
+    return this
+
 exports.db = (db) ->
   new Gremlin {db}

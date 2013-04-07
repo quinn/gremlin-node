@@ -9,9 +9,11 @@ class Gremlin
     # @params ||= {}
     # @params.vParam = options
     @_start "v(#{val})"
+    return this
 
   V: ->
     @_start 'V'
+    return this
 
   outE: ->
     @script += '.outE'

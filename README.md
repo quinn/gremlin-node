@@ -1,7 +1,7 @@
 # Proof-of-concept for using gremlin syntax in javascript. 
 
 ## Getting started
-This is meant to sit on top of an existing neo4j database created with node-neo.
+This is meant to sit on top of an existing neo4j database created with node-neo4j.
 
 ```javascript
 var neo4j = require('neo4j'),
@@ -17,7 +17,7 @@ g.v(1).out('likes').run( function(err, node) {
     // deal with your problems
   }
   else {
-    // the node object is what would be returned from a regular node-neo query
+    // the node object is what would be returned from a regular node-neo4j query
     console.log( node[0]._data );
   }
 });

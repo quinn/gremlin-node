@@ -1,20 +1,24 @@
-{ "name": "germlin-node"
-  , "description": "Gremlin for node."
-  , "version": "0.0.1"
-  , "author": "Quinn Shanahan <q.shanahan@gmail.com@gmail.com>"
-  , "private": true
-  , "dependencies":
-    { "neo4j": "~0.2.19"
-    , "coffee-script": ">0"
-  }
-  , "devDependencies":
-    { "node-dev": "~0.2.3"
-  }
-  , "engines":
-    { "node": "0.6.x"
-    , "npm": "1.1.x <1.1.46"
-  }
-  , "scripts":
-    { "start": "node-dev app.coffee"
+{
+  "name": "gremlin-node",
+  "description": "Gremlin for node.",
+  "version": "0.0.1",
+  "author": "Quinn Shanahan <q.shanahan@gmail.com@gmail.com>",
+  "contributors" : ["Jonathan Freeman <freethejazz@gmail.com>"],
+  "private": true,
+  "dependencies": {
+    "neo4j": "~0.2.19"
+  },
+  "devDependencies": {
+    "node-dev": "~0.2.3",
+    "mocha": "~1.12.0",
+    "should": "~1.2.2"
+  },
+  "engines": {
+    "node": "0.6.x",
+    "npm": "1.1.x <1.1.46"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "./node_modules/.bin/mocha"
   }
 }

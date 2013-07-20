@@ -1,4 +1,6 @@
-# Proof-of-concept for using gremlin syntax in javascript. 
+# gremlin-node
+
+Proof-of-concept for using gremlin syntax in javascript. 
 
 ## Getting started
 This is meant to sit on top of an existing neo4j database created with node-neo4j.
